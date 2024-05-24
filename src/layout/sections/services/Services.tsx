@@ -20,7 +20,7 @@ export function Services() {
 		<StyledServices>
 			<FlexWrapper wrap='wrap' justify='space-between'>
 				{data.map(item => (
-					<ServicesItem item={item} />
+					<ServicesItem item={item} key={item.id} />
 				))}
 			</FlexWrapper>
 		</StyledServices>

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 type ServicesItemPropsType = { id: string; src: string; text: string }
 export function ServicesItem(props: { item: ServicesItemPropsType }) {
 	return (
-		<StyledServicesItem key={props.item.id}>
+		<StyledServicesItem>
 			<Image src={props.item.src} alt={props.item.text} />
 			<Text>{props.item.text}</Text>
 		</StyledServicesItem>
