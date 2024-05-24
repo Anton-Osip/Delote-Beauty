@@ -1,4 +1,5 @@
 import './App.css'
+import { Footer } from './layout/footer/Footer'
 import { Header } from './layout/header/Header'
 import { About } from './layout/sections/about/About'
 import { Cosmetics } from './layout/sections/cosmetics/Cosmetics'
@@ -15,6 +16,7 @@ function App() {
 			<Services />
 			<Cosmetics />
 			<Works />
+			<Footer />
 		</div>
 	)
 }
