@@ -1,5 +1,6 @@
 import './App.css'
-import { ContactsPage } from './Pages/contactsPage/ContactsPage'
+import { ErrorPage } from './Pages/errorPage/ErrorPage'
+// import { ContactsPage } from './Pages/contactsPage/ContactsPage'
 // import { PricePage } from './Pages/pricePage/PricePage'
 // import {HomePage} from "./Pages/homePage/HomePage";
 import { Footer } from './layout/footer/Footer'
@@ -13,7 +14,8 @@ function App() {
 			{/*<HomePage/>*/}
 			{/* <TeamPage/> */}
 			{/* <PricePage /> */}
-			<ContactsPage />
+			{/* <ContactsPage /> */}
+			<ErrorPage />
 			<Footer />
 		</div>
 	)
