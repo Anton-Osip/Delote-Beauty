@@ -13,11 +13,11 @@ export interface INavItem {
 const LeftNav: INavItem[] = [
 	{ id: 'LeftNav1', link: 'home', text: 'Главная' },
 	{ id: 'LeftNav2', link: 'team', text: 'Мастера' },
-	{ id: 'LeftNav3', link: 'cosmetics', text: 'Косметика' },
+	{ id: 'LeftNav3', link: 'error', text: 'Косметика' },
 ]
 const RightNav: INavItem[] = [
-	{ id: 'RightNav1', link: 'stock', text: 'Акции' },
-	{ id: 'RightNav2', link: 'reviews', text: 'Отзывы' },
+	{ id: 'RightNav1', link: 'price', text: 'Акции' },
+	{ id: 'RightNav2', link: 'error', text: 'Отзывы' },
 	{ id: 'RightNav3', link: 'contacts', text: 'Контакты' },
 ]
 

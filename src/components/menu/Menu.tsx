@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { INavItem } from '../../layout/header/Header'
 interface IMenuProps {
@@ -9,7 +10,7 @@ export function Menu(props: IMenuProps) {
 			<ul>
 				{props.navItems.map((item: INavItem) => (
 					<li key={item.id}>
-						<a href={item.link}>{item.text}</a>
+						<NavLink to={item.link}>{item.text}</NavLink>
 					</li>
 				))}
 			</ul>

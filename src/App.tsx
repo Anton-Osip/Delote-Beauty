@@ -1,21 +1,25 @@
+import { Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
+import { ContactsPage } from './Pages/contactsPage/ContactsPage'
 import { ErrorPage } from './Pages/errorPage/ErrorPage'
-// import { ContactsPage } from './Pages/contactsPage/ContactsPage'
-// import { PricePage } from './Pages/pricePage/PricePage'
-// import {HomePage} from "./Pages/homePage/HomePage";
+import { HomePage } from './Pages/homePage/HomePage'
+import { PricePage } from './Pages/pricePage/PricePage'
+import { TeamPage } from './Pages/teamPage/TeamPage'
 import { Footer } from './layout/footer/Footer'
 import { Header } from './layout/header/Header'
-// import {TeamPage} from "./Pages/teamPage/TeamPage";
 
 function App() {
 	return (
 		<div className='App'>
 			<Header />
-			{/*<HomePage/>*/}
-			{/* <TeamPage/> */}
-			{/* <PricePage /> */}
-			{/* <ContactsPage /> */}
-			<ErrorPage />
+			<Routes>
+				<Route path='/' element={<Navigate to={'/home'} />} />
+				<Route path='/home' element={<HomePage />} />
+				<Route path='/team' element={<TeamPage />} />
+				<Route path='/price' element={<PricePage />} />
+				<Route path='/contacts' element={<ContactsPage />} />
+				<Route path='/error' element={<ErrorPage />} />
+			</Routes>
 			<Footer />
 		</div>
 	)
