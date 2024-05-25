@@ -1,5 +1,6 @@
 import './App.css'
-import { PricePage } from './Pages/pricePage/PricePage'
+import { ContactsPage } from './Pages/contactsPage/ContactsPage'
+// import { PricePage } from './Pages/pricePage/PricePage'
 // import {HomePage} from "./Pages/homePage/HomePage";
 import { Footer } from './layout/footer/Footer'
 import { Header } from './layout/header/Header'
@@ -11,7 +12,8 @@ function App() {
 			<Header />
 			{/*<HomePage/>*/}
 			{/* <TeamPage/> */}
-			<PricePage />
+			{/* <PricePage /> */}
+			<ContactsPage />
 			<Footer />
 		</div>
 	)
