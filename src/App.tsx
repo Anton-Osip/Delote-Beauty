@@ -1,18 +1,18 @@
 import './App.css'
+import { PricePage } from './Pages/pricePage/PricePage'
 // import {HomePage} from "./Pages/homePage/HomePage";
-import {Header} from "./layout/header/Header";
-import {Footer} from "./layout/footer/Footer";
-import {TeamPage} from "./Pages/teamPage/TeamPage";
-
+import { Footer } from './layout/footer/Footer'
+import { Header } from './layout/header/Header'
+// import {TeamPage} from "./Pages/teamPage/TeamPage";
 
 function App() {
 	return (
 		<div className='App'>
 			<Header />
 			{/*<HomePage/>*/}
-			<TeamPage/>
+			{/* <TeamPage/> */}
+			<PricePage />
 			<Footer />
-
 		</div>
 	)
 }
