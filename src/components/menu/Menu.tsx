@@ -23,4 +23,10 @@ const StyledMenu = styled.nav`
 		display: flex;
 		gap: 30px;
 	}
+
+	a {
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 130%;
+	}
 `
