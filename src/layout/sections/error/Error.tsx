@@ -1,19 +1,22 @@
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import error from '../../../assets/images/Error.png'
+import { Container } from '../../../components/Container'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { SectionTitle } from '../../../components/SectionTitle'
 import { theme } from '../../../styles/Theme'
 export function Error() {
 	return (
 		<StyledError>
-			<FlexWrapper direction='column' align='center' justify='center'>
-				<Image src={error} alt='error' />
-				<SectionTitle>Страница не найдена</SectionTitle>
-				<NavLink to='/home'>
-					<Link>на главную</Link>
-				</NavLink>
-			</FlexWrapper>
+			<Container>
+				<FlexWrapper direction='column' align='center' justify='center'>
+					<Image src={error} alt='error' />
+					<SectionTitle>Страница не найдена</SectionTitle>
+					<NavLink to='/home'>
+						<Link>на главную</Link>
+					</NavLink>
+				</FlexWrapper>
+			</Container>
 		</StyledError>
 	)
 }
