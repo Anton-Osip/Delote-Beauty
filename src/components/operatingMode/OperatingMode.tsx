@@ -11,7 +11,17 @@ export function OperatingMode() {
 }
 
 const StyledOperatingMode = styled.div``
-const Title = styled.h5``
+const Title = styled.h5`
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 120%;
+	margin-bottom: 25px;
+`
 const Text = styled.span`
 	display: block;
+	font-family: Cormorant Garamond;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 130%;
+	margin-bottom: 15px;
 `

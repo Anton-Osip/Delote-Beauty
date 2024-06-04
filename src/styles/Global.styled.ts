@@ -57,6 +57,7 @@ export const GlobalStyled = createGlobalStyle`
 	font-display: swap;
 }
 
+
 	*,
 	*::before,
 	*::after{
