@@ -19,7 +19,7 @@ const Title = styled.h5`
 `
 const Text = styled.span`
 	display: block;
-	font-family: Cormorant Garamond;
+	font-family: 'Cormorant Garamond';
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 130%;

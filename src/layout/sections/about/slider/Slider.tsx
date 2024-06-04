@@ -34,7 +34,7 @@ const Slide = styled.div`
 	text-align: center;
 `
 const Text = styled.p`
-	font-family: Cormorant Garamond;
+	font-family: 'Cormorant Garamond';
 	font-size: 27px;
 	font-weight: 700;
 	line-height: 130%;

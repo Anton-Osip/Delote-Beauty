@@ -37,6 +37,7 @@ const MainTitle = styled.h1`
 `
 
 const ScrollDown = styled.button`
+	font-family: 'Cormorant Garamond';
 	display: inline-block;
 	padding-left: 40px;
 	position: relative;

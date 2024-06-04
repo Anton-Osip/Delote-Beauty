@@ -27,7 +27,7 @@ const StyledTabs = styled.div`
 `
 
 const Link = styled.a`
-	font-family: Cormorant Garamond;
+	font-family: 'Cormorant Garamond';
 	font-size: 24px;
 	font-weight: 400;
 	line-height: 130%;
