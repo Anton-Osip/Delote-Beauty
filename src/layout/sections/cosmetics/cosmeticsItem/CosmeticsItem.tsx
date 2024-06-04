@@ -24,6 +24,8 @@ export function CosmeticsItem(props: { item: CosmeticsItemPropsType }) {
 
 const StyledCosmeticsItem = styled.div`
 	width: 22%;
-	background-color: #feefa4;
-	margin: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0.5;
 `

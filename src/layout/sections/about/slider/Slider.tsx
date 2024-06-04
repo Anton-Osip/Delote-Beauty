@@ -22,8 +22,10 @@ export function Slider() {
 }
 
 const StyledSlider = styled.div`
-	max-width: 500px;
-	border: 1px solid red;
+	max-width: 856px;
+	width: 100%;
+
+	margin-top: 60px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -31,4 +33,15 @@ const StyledSlider = styled.div`
 const Slide = styled.div`
 	text-align: center;
 `
-const Text = styled.p``
+const Text = styled.p`
+	font-family: 'Cormorant Garamond';
+	font-size: 27px;
+	font-weight: 700;
+	line-height: 130%;
+	letter-spacing: 0%;
+	text-align: center;
+
+	& + p {
+		margin-top: 30px;
+	}
+`

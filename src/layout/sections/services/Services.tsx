@@ -5,7 +5,7 @@ import services3 from '../../../assets/images/services/services-3.jpg'
 import services4 from '../../../assets/images/services/services-4.jpg'
 import services5 from '../../../assets/images/services/services-5.jpg'
 import services6 from '../../../assets/images/services/services-6.jpg'
-import { FlexWrapper } from '../../../components/FlexWrapper'
+import { Container } from '../../../components/Container'
 import { ServicesItem } from './servicesItem/ServicesItem'
 const data = [
 	{ id: 'services6', src: services6, text: 'Парикмахерские услуги' },
@@ -18,16 +18,21 @@ const data = [
 export function Services() {
 	return (
 		<StyledServices>
-			<FlexWrapper wrap='wrap' justify='space-between'>
-				{data.map(item => (
-					<ServicesItem item={item} key={item.id} />
-				))}
-			</FlexWrapper>
+			<Container>
+				<ServicesContainer>
+					{data.map(item => (
+						<ServicesItem item={item} key={item.id} />
+					))}
+				</ServicesContainer>
+			</Container>
 		</StyledServices>
 	)
 }
 
-const StyledServices = styled.section`
-	min-height: 100vh;
-	background-color: #c2f9a4;
+const StyledServices = styled.section``
+const ServicesContainer = styled.div`
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 24px;
+	row-gap: 60px;
 `
