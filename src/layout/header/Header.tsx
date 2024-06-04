@@ -50,8 +50,9 @@ const StyledHeader = styled.header`
 	top: 0;
 	left: 0;
 	right: 0;
+	z-index: 5;
 	${Container} {
 		border-bottom: 1px solid ${theme.colors.font};
-		padding: 40px 0;
+		padding: 40px 15px 0 15px;
 	}
 `
