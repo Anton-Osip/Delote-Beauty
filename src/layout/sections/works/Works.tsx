@@ -8,6 +8,7 @@ import work6 from '../../../assets/images/works/work-6.jpg'
 import work7 from '../../../assets/images/works/work-7.jpg'
 import work8 from '../../../assets/images/works/work-8.jpg'
 import work9 from '../../../assets/images/works/work-9.jpg'
+import { Container } from '../../../components/Container'
 import { SectionTitle } from '../../../components/SectionTitle'
 import { Tabs } from '../../../components/tabs/Tabs'
 
@@ -23,24 +24,25 @@ const worksImg = [work1, work2, work3, work4, work5, work6, work7, work8, work9]
 export function Works() {
 	return (
 		<StyledWorks>
-			<SectionTitle>Наши работы</SectionTitle>
-			<Tabs tabs={DataTabs} />
-
-			<WorksWrapper>
-				{worksImg.map((item, index) => (
-					<Image src={item} key={`works${index}`} />
-				))}
-			</WorksWrapper>
+			<Container>
+				<SectionTitle>Наши работы</SectionTitle>
+				<Tabs tabs={DataTabs} />
+				<WorksWrapper>
+					{worksImg.map((item, index) => (
+						<Image src={item} key={`works${index}`} />
+					))}
+				</WorksWrapper>
+			</Container>
 		</StyledWorks>
 	)
 }
 
 const StyledWorks = styled.section`
-	min-height: 100vh;
-	background-color: #efa1fd;
+	padding-bottom: 100px;
 `
 
 const WorksWrapper = styled.section`
+	margin-top: 55px;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-auto-rows: 1fr;
