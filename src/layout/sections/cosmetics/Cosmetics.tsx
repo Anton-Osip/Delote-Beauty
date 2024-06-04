@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Container } from '../../../components/Container'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { CosmeticsItem } from './cosmeticsItem/CosmeticsItem'
 const data = [
@@ -34,15 +35,16 @@ const data = [
 export function Cosmetics() {
 	return (
 		<StyledCosmetics>
-			<FlexWrapper wrap='wrap' justify='space-between'>
-				{data.map(item => (
-					<CosmeticsItem item={item} key={item.id} />
-				))}
-			</FlexWrapper>
+			<Container>
+				<FlexWrapper wrap='wrap' justify='space-between'>
+					{data.map(item => (
+						<CosmeticsItem item={item} key={item.id} />
+					))}
+				</FlexWrapper>
+			</Container>
 		</StyledCosmetics>
 	)
 }
 const StyledCosmetics = styled.section`
-	min-height: 30vh;
-	background-color: #a4f9ec;
+	padding: 150px 0 168px;
 `
