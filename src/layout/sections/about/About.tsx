@@ -15,5 +15,5 @@ export function About() {
 }
 
 const StyledAbout = styled.section`
-	background-color: #90a4ff;
+	padding: 120px 0 95px;
 `

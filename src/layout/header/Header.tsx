@@ -53,6 +53,6 @@ const StyledHeader = styled.header`
 	z-index: 5;
 	${Container} {
 		border-bottom: 1px solid ${theme.colors.font};
-		padding: 40px 15px 0 15px;
+		padding: 40px 15px 30px 15px;
 	}
 `
