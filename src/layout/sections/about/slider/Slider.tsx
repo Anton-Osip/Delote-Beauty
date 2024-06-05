@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { font } from '../../../../styles/Common'
+import { theme } from '../../../../styles/Theme'
 
 export function Slider() {
 	return (
@@ -29,19 +31,29 @@ const StyledSlider = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
+	@media ${theme.media.tablet} {
+		margin-top: 20px;
+	}
 `
 const Slide = styled.div`
 	text-align: center;
 `
 const Text = styled.p`
-	font-family: 'Cormorant Garamond';
-	font-size: 27px;
-	font-weight: 700;
-	line-height: 130%;
+	${font({
+		family: 'Cormorant Garamond',
+		weight: 700,
+		lineHeight: 1.3,
+		Fmax: 27,
+		Fmin: 20,
+	})}
 	letter-spacing: 0%;
 	text-align: center;
 
 	& + p {
 		margin-top: 30px;
+		@media ${theme.media.tablet} {
+			margin-top: 15px;
+		}
 	}
 `

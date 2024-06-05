@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { Icon } from '../../../components/icon/Icon'
+import { theme } from '../../../styles/Theme'
 import { Slider } from './slider/Slider'
 
 export function About() {
@@ -16,4 +17,11 @@ export function About() {
 
 const StyledAbout = styled.section`
 	padding: 120px 0 95px;
+
+	@media ${theme.media.tablet} {
+		padding: 80px 0 65px;
+	}
+	@media ${theme.media.mobile} {
+		padding: 50px 0 30px;
+	}
 `
