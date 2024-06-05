@@ -11,6 +11,7 @@ import work9 from '../../../assets/images/works/work-9.jpg'
 import { Container } from '../../../components/Container'
 import { SectionTitle } from '../../../components/SectionTitle'
 import { Tabs } from '../../../components/tabs/Tabs'
+import { theme } from '../../../styles/Theme'
 
 const DataTabs = [
 	{ id: 'tab1', text: 'Показать все', active: true },
@@ -47,6 +48,13 @@ const WorksWrapper = styled.section`
 	grid-template-columns: repeat(3, 1fr);
 	grid-auto-rows: 1fr;
 	gap: 24px;
+
+	@media ${theme.media.tablet} {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media ${theme.media.mobile} {
+		grid-template-columns: repeat(1, 1fr);
+	}
 `
 const Image = styled.img`
 	width: 100%;
