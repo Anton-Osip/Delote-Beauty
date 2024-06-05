@@ -5,7 +5,7 @@ import { ErrorPage } from './Pages/errorPage/ErrorPage'
 import { HomePage } from './Pages/homePage/HomePage'
 import { PricePage } from './Pages/pricePage/PricePage'
 import { TeamPage } from './Pages/teamPage/TeamPage'
-import { Footer } from './layout/footer/Footer'
+// import { Footer } from './layout/footer/Footer'
 import { Header } from './layout/header/Header'
 import { HeaderMobile } from './layout/header/headerMobile/HeaderMobile'
 
@@ -22,7 +22,7 @@ function App() {
 				<Route path='/contacts' element={<ContactsPage />} />
 				<Route path='/error' element={<ErrorPage />} />
 			</Routes>
-			<Footer />
+			{/* <Footer /> */}
 		</div>
 	)
 }

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import image from '../../../assets/images/baner2x.jpg'
+import { font } from '../../../styles/Common'
 import { theme } from '../../../styles/Theme'
 
 export function Main() {
@@ -31,9 +32,7 @@ const MainTitle = styled.h1`
 	flex-grow: 2;
 	display: flex;
 	align-items: center;
-	font-size: 72px;
-	font-weight: 700;
-	line-height: 120%;
+	${font({ weight: 700, lineHeight: 1.2, Fmax: 72, Fmin: 40 })}
 `
 
 const ScrollDown = styled.button`
