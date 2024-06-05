@@ -6,6 +6,7 @@ import img4 from '../../../assets/images/teams/team-4.jpg'
 import img5 from '../../../assets/images/teams/team-5.jpg'
 import { Container } from '../../../components/Container'
 import { SectionTitle } from '../../../components/SectionTitle'
+import { theme } from '../../../styles/Theme'
 import { TeamItem } from './teamItem/TeamItem'
 
 const teamItem = [
@@ -34,10 +35,24 @@ export function Team() {
 
 const StyledTeam = styled.section`
 	padding: 180px 0 100px;
+	@media ${theme.media.tablet} {
+		padding: 180px 0 65px;
+	}
+	@media ${theme.media.mobile} {
+		padding: 180px 0 30px;
+	}
 `
 const TeamWrapper = styled.div`
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	row-gap: 60px;
 	column-gap: 24px;
+	@media ${theme.media.tablet} {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 30px;
+	}
+	@media ${theme.media.mobile} {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 30px;
+	}
 `
