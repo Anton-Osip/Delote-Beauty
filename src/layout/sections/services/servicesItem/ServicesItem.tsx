@@ -59,4 +59,11 @@ const Text = styled.h3`
 	line-height: 120%;
 	letter-spacing: 0%;
 	margin-top: 30px;
+
+	@media ${theme.media.tablet} {
+		font-size: 24px;
+	}
+	@media ${theme.media.mobile} {
+		font-size: 30px;
+	}
 `

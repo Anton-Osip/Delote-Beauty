@@ -6,6 +6,7 @@ import services4 from '../../../assets/images/services/services-4.jpg'
 import services5 from '../../../assets/images/services/services-5.jpg'
 import services6 from '../../../assets/images/services/services-6.jpg'
 import { Container } from '../../../components/Container'
+import { theme } from '../../../styles/Theme'
 import { ServicesItem } from './servicesItem/ServicesItem'
 const data = [
 	{ id: 'services6', src: services6, text: 'Парикмахерские услуги' },
@@ -35,4 +36,13 @@ const ServicesContainer = styled.div`
 	grid-template-columns: repeat(3, 1fr);
 	column-gap: 24px;
 	row-gap: 60px;
+
+	@media ${theme.media.tablet} {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+	@media ${theme.media.mobile} {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 15px;
+	}
 `
