@@ -23,6 +23,12 @@ export function Error() {
 
 const StyledError = styled.section`
 	padding: 180px 0 100px;
+	@media ${theme.media.tablet} {
+		padding: 180px 0 65px;
+	}
+	@media ${theme.media.mobile} {
+		padding: 180px 0 30px;
+	}
 
 	${SectionTitle} {
 		color: ${theme.colors.borderColor};
@@ -31,6 +37,7 @@ const StyledError = styled.section`
 
 const Image = styled.img`
 	margin-bottom: 24px;
+	width: 100%;
 `
 const Link = styled.a`
 	font-family: 'Cormorant Garamond';
