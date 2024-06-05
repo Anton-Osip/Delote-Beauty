@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 import { Container } from '../../components/Container'
 import { FlexWrapper } from '../../components/FlexWrapper'
@@ -6,6 +7,7 @@ import { Icon } from '../../components/icon/Icon'
 import { Logo } from '../../components/logo/Logo'
 import { Menu } from '../../components/menu/Menu'
 import { theme } from '../../styles/Theme'
+import Sidebar from '../sections/sidebar/Sidebar'
 
 export interface INavItem {
 	id: string
@@ -25,6 +27,8 @@ const RightNav: INavItem[] = [
 ]
 
 export function Header() {
+	const [isOpen, setIsOpen] = useState(true)
+
 	return (
 		<StyledHeader>
 			<Container>
@@ -38,9 +42,10 @@ export function Header() {
 					<Menu navItems={LeftNav} />
 					<Logo />
 					<Menu navItems={RightNav} />
-					<Burger />
+					<Burger isOpen={isOpen} setIsOpen={setIsOpen} />
 				</FlexWrapper>
 			</Container>
+			<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 		</StyledHeader>
 	)
 }

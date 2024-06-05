@@ -1,15 +1,20 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { theme } from '../../styles/Theme'
-
-export function Burger() {
+type BurgerPropsType = { isOpen: boolean; setIsOpen: (isOpen: boolean) => void }
+export function Burger(props: BurgerPropsType) {
 	return (
-		<StyledBurger>
+		<StyledBurger
+			isOpen={!props.isOpen}
+			onClick={() => {
+				props.setIsOpen(!props.isOpen)
+			}}
+		>
 			<span></span>
 		</StyledBurger>
 	)
 }
 
-const StyledBurger = styled.button`
+const StyledBurger = styled.button<{ isOpen: boolean }>`
 	width: 60px;
 	height: 50px;
 	display: flex;
@@ -22,6 +27,11 @@ const StyledBurger = styled.button`
 		height: 2px;
 		background-color: ${theme.colors.font};
 		position: relative;
+		${props =>
+			props.isOpen &&
+			css<{ isOpen: boolean }>`
+				background-color: transparent;
+			`}
 	}
 
 	span::after,
@@ -36,8 +46,21 @@ const StyledBurger = styled.button`
 
 	span::before {
 		top: 10px;
+
+		${props =>
+			props.isOpen &&
+			css<{ isOpen: boolean }>`
+				top: 0;
+				transform: rotate(-45deg);
+			`}
 	}
 	span::after {
 		bottom: 10px;
+		${props =>
+			props.isOpen &&
+			css<{ isOpen: boolean }>`
+				bottom: 0;
+				transform: rotate(45deg);
+			`}
 	}
 `
