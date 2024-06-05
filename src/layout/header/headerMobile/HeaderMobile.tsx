@@ -1,13 +1,12 @@
 import { useState } from 'react'
 import styled from 'styled-components'
-import { Container } from '../../components/Container'
-import { FlexWrapper } from '../../components/FlexWrapper'
-import { Burger } from '../../components/burger/Burger'
-import { Icon } from '../../components/icon/Icon'
-import { Logo } from '../../components/logo/Logo'
-import { Menu } from '../../components/menu/Menu'
-import { theme } from '../../styles/Theme'
-import Sidebar from '../sections/sidebar/Sidebar'
+import { Container } from '../../../components/Container'
+import { FlexWrapper } from '../../../components/FlexWrapper'
+import { Burger } from '../../../components/burger/Burger'
+import { Icon } from '../../../components/icon/Icon'
+import { Logo } from '../../../components/logo/Logo'
+import { Menu } from '../../../components/menu/Menu'
+import { theme } from '../../../styles/Theme'
 
 export interface INavItem {
 	id: string
@@ -15,22 +14,20 @@ export interface INavItem {
 	text: string
 }
 
-const LeftNav: INavItem[] = [
+const NavDate: INavItem[] = [
 	{ id: 'LeftNav1', link: 'home', text: 'Главная' },
 	{ id: 'LeftNav2', link: 'team', text: 'Мастера' },
 	{ id: 'LeftNav3', link: 'error', text: 'Косметика' },
-]
-const RightNav: INavItem[] = [
 	{ id: 'RightNav1', link: 'price', text: 'Акции' },
 	{ id: 'RightNav2', link: 'error', text: 'Отзывы' },
 	{ id: 'RightNav3', link: 'contacts', text: 'Контакты' },
 ]
 
-export function Header() {
-	const [isOpen, setIsOpen] = useState(true)
+export function HeaderMobile() {
+	const [modalIsOpen, setModalIsOpen] = useState(true)
 
 	return (
-		<StyledHeader>
+		<StyledHeaderMobile>
 			<Container>
 				<FlexWrapper justify='space-between' align='center'>
 					<Icon
@@ -39,18 +36,21 @@ export function Header() {
 						height='26'
 						viewBox='0 0 26 26'
 					/>
-					<Menu navItems={LeftNav} />
+					<Menu
+						navItems={NavDate}
+						modalIsOpen={modalIsOpen}
+						setModalIsOpen={setModalIsOpen}
+					/>
 					<Logo />
-					<Menu navItems={RightNav} />
-					<Burger isOpen={isOpen} setIsOpen={setIsOpen} />
+					<Burger isOpen={modalIsOpen} setIsOpen={setModalIsOpen} />
 				</FlexWrapper>
 			</Container>
-			<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
-		</StyledHeader>
+		</StyledHeaderMobile>
 	)
 }
 
-const StyledHeader = styled.header`
+const StyledHeaderMobile = styled.header`
+	display: none;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -62,6 +62,6 @@ const StyledHeader = styled.header`
 	}
 
 	@media ${theme.media.tablet} {
-		display: none;
+		display: block;
 	}
 `
