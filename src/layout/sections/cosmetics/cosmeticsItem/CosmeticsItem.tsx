@@ -23,7 +23,10 @@ export function CosmeticsItem(props: { item: CosmeticsItemPropsType }) {
 }
 
 const StyledCosmeticsItem = styled.div`
-	width: 22%;
+	width: 100%;
+	max-width: 306px;
+	padding: 10px;
+	flex-grow: 1;
 	display: flex;
 	align-items: center;
 	justify-content: center;
