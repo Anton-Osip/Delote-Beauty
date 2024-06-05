@@ -11,7 +11,7 @@ export function Footer() {
 	return (
 		<StyledFooter>
 			<Container>
-				<FlexWrapper justify='space-between' align='flex-start'>
+				<FlexWrapper justify='space-between' align='flex-start' wrap='wrap'>
 					<NavLink to={'/home'}>
 						<Icon
 							idIcon='logoIcon'
@@ -43,6 +43,10 @@ const StyledFooter = styled.footer`
 		padding: 80px 0;
 		border-top: 1px solid ${theme.colors.font};
 		border-bottom: 1px solid ${theme.colors.font};
+
+		@media ${theme.media.tablet} {
+			display: none;
+		}
 	}
 `
 
@@ -62,4 +66,7 @@ const Copyright = styled.p`
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 140%;
+	@media ${theme.media.tablet} {
+		border-top: 1px solid ${theme.colors.font};
+	}
 `
