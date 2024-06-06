@@ -1,13 +1,12 @@
 import { useState } from 'react'
-import styled from 'styled-components'
-import { Container } from '../../components/Container'
-import { FlexWrapper } from '../../components/FlexWrapper'
-import { Burger } from '../../components/burger/Burger'
-import { Icon } from '../../components/icon/Icon'
-import { Logo } from '../../components/logo/Logo'
-import { Menu } from '../../components/menu/Menu'
-import { theme } from '../../styles/Theme'
-import Sidebar from '../sections/sidebar/Sidebar'
+import { Container } from '../../../components/Container'
+import { FlexWrapper } from '../../../components/FlexWrapper'
+import { Burger } from '../../../components/burger/Burger'
+import { Icon } from '../../../components/icon/Icon'
+import { Logo } from '../../../components/logo/Logo'
+import { Menu } from '../../../components/menu/Menu'
+import Sidebar from '../../sections/sidebar/Sidebar'
+import { S } from './DesktopHeader_styles'
 
 export interface INavItem {
 	id: string
@@ -26,11 +25,11 @@ const RightNav: INavItem[] = [
 	{ id: 'RightNav3', link: 'contacts', text: 'Контакты' },
 ]
 
-export function Header() {
+export const DesktopHeader: React.FC = () => {
 	const [isOpen, setIsOpen] = useState(true)
 
 	return (
-		<StyledHeader>
+		<S.DesktopHeader>
 			<Container>
 				<FlexWrapper justify='space-between' align='center'>
 					<Icon
@@ -46,22 +45,6 @@ export function Header() {
 				</FlexWrapper>
 			</Container>
 			<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
-		</StyledHeader>
+		</S.DesktopHeader>
 	)
 }
-
-const StyledHeader = styled.header`
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 5;
-	${Container} {
-		border-bottom: 1px solid ${theme.colors.font};
-		padding: 40px 15px 30px 15px;
-	}
-
-	@media ${theme.media.tablet} {
-		display: none;
-	}
-`

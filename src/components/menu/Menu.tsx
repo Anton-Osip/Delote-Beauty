@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { INavItem } from '../../layout/header/Header'
+import { INavItem } from '../../layout/header/desktopHeader/DesktopHeader'
 import { S } from './Menu_Styles'
 
 interface IMenuProps {
