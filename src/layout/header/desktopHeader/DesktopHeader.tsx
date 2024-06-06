@@ -5,7 +5,7 @@ import { Burger } from '../../../components/burger/Burger'
 import { Icon } from '../../../components/icon/Icon'
 import { Logo } from '../../../components/logo/Logo'
 import { Menu } from '../../../components/menu/Menu'
-import Sidebar from '../../sections/sidebar/Sidebar'
+import { Sidebar } from '../../sections/sidebar/Sidebar'
 import { S } from './DesktopHeader_styles'
 
 export interface INavItem {

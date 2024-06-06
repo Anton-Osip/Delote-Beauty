@@ -1,9 +1,9 @@
-import {Team} from "../../layout/sections/team/Team";
+import { Team } from '../../layout/sections/team/Team'
 
-export function TeamPage() {
-    return (
-        <>
-            <Team/>
-        </>
-    )
+export const TeamPage: React.FC = () => {
+	return (
+		<>
+			<Team />
+		</>
+	)
 }

@@ -1,6 +1,6 @@
-import Price from '../../layout/sections/price/Price'
+import { Price } from '../../layout/sections/price/Price'
 
-export function PricePage() {
+export const PricePage: React.FC = () => {
 	return (
 		<>
 			<Price />

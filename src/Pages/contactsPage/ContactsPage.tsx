@@ -1,6 +1,5 @@
 import { Contacts } from '../../layout/sections/contacts/Contacts'
-
-export function ContactsPage() {
+export const ContactsPage: React.FC = () => {
 	return (
 		<>
 			<Contacts />
