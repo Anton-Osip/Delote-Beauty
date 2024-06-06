@@ -33,7 +33,7 @@ const data = [
 		viewBox: '0 0 110 108',
 	},
 ]
-export function Cosmetics() {
+export const Cosmetics: React.FC = () => {
 	return (
 		<StyledCosmetics>
 			<Container>

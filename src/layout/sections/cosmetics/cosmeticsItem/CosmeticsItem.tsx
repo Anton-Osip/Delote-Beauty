@@ -9,7 +9,9 @@ type CosmeticsItemPropsType = {
 	viewBox: string
 }
 
-export function CosmeticsItem(props: { item: CosmeticsItemPropsType }) {
+export const CosmeticsItem: React.FC<{
+	item: CosmeticsItemPropsType
+}> = (props: { item: CosmeticsItemPropsType }) => {
 	return (
 		<StyledCosmeticsItem>
 			<Icon
