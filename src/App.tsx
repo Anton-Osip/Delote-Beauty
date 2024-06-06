@@ -10,7 +10,7 @@ import { Footer } from './layout/footer/Footer'
 import { DesktopHeader } from './layout/header/desktopHeader/DesktopHeader'
 import { MobileHeader } from './layout/header/mobileHeader/MobileHeader'
 
-function App() {
+export const App: React.FC = () => {
 	const [width, setWidth] = useState(window.innerWidth)
 	const breakpoint = 768
 
@@ -35,5 +35,3 @@ function App() {
 		</div>
 	)
 }
-
-export default App
