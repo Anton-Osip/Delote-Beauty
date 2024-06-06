@@ -1,48 +1,30 @@
 import { NavLink } from 'react-router-dom'
-import styled from 'styled-components'
-import { INavItem } from '../../layout/header/Header'
-import { theme } from '../../styles/Theme'
+import { INavItem } from '../../layout/header/desktopHeader/DesktopHeader'
+import { S } from './Menu_Styles'
+
 interface IMenuProps {
 	navItems: INavItem[]
+	modalIsOpen?: boolean
+	setModalIsOpen?: (isOpen: boolean) => void
 }
-export function Menu(props: IMenuProps) {
+
+export const Menu: React.FC<IMenuProps> = (props: IMenuProps) => {
 	return (
-		<StyledMenu>
+		<S.Menu modalIsOpen={props.modalIsOpen}>
 			<ul>
 				{props.navItems.map((item: INavItem) => (
-					<li key={item.id}>
+					<li
+						key={item.id}
+						onClick={() => {
+							if (props.setModalIsOpen) {
+								props.setModalIsOpen(!props.modalIsOpen)
+							}
+						}}
+					>
 						<NavLink to={item.link}>{item.text}</NavLink>
 					</li>
 				))}
 			</ul>
-		</StyledMenu>
+		</S.Menu>
 	)
 }
-
-const StyledMenu = styled.nav`
-	ul {
-		display: flex;
-		gap: 30px;
-	}
-
-	a {
-		font-family: 'Cormorant Garamond';
-		font-size: 18px;
-		font-weight: 600;
-		line-height: 130%;
-	}
-	a.active {
-		color: ${theme.colors.borderColor};
-		position: relative;
-		&:after {
-			content: '';
-			display: inline-block;
-			position: absolute;
-			bottom: -4px;
-			left: 0;
-			right: 0;
-			height: 2px;
-			background-color: ${theme.colors.borderColor};
-		}
-	}
-`

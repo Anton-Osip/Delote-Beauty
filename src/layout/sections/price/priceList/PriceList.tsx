@@ -1,19 +1,13 @@
-import styled from 'styled-components'
+import { S } from '../Price_Styles'
 import { PriceItem } from '../priceItem/PriceItem'
-type PriceListType = { mode?: string }
-export function PriceList(props: PriceListType) {
+export type PriceListType = { mode?: string }
+export const PriceList: React.FC<PriceListType> = (props: PriceListType) => {
 	return (
-		<List mode={props.mode}>
+		<S.List mode={props.mode}>
 			<PriceItem />
 			<PriceItem />
 			<PriceItem />
 			<PriceItem />
-		</List>
+		</S.List>
 	)
 }
-
-const List = styled.ul<PriceListType>`
-	width: 100%;
-	max-width: 526px;
-	margin-left: ${props => props.mode || '0px'};
-`

@@ -1,49 +1,21 @@
-import styled from 'styled-components'
-import { theme } from '../../styles/Theme'
+import { S } from './Tabs_Styles'
 
 type TabsPropsType = { id: string; text: string; active: boolean }
 
-export function Tabs(props: { tabs: TabsPropsType[] }) {
+export const Tabs: React.FC<{
+	tabs: TabsPropsType[]
+}> = (props: { tabs: TabsPropsType[] }) => {
 	return (
-		<StyledTabs>
+		<S.Tabs>
 			{props.tabs.map(item => (
-				<Link
+				<S.Link
 					href='#tabs'
 					key={item.id}
 					className={item.active ? 'active' : ''}
 				>
 					{item.text}
-				</Link>
+				</S.Link>
 			))}
-		</StyledTabs>
+		</S.Tabs>
 	)
 }
-
-const StyledTabs = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 60px;
-`
-
-const Link = styled.a`
-	font-family: 'Cormorant Garamond';
-	font-size: 24px;
-	font-weight: 400;
-	line-height: 130%;
-	letter-spacing: 0%;
-	&.active {
-		color: ${theme.colors.borderColor};
-		position: relative;
-		&:after {
-			content: '';
-			display: inline-block;
-			position: absolute;
-			bottom: -4px;
-			left: 0;
-			right: 0;
-			height: 2px;
-			background-color: ${theme.colors.borderColor};
-		}
-	}
-`

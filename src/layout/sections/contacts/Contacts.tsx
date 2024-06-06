@@ -1,33 +1,29 @@
-import styled from 'styled-components'
 import map from '../../../assets/images//map.jpg'
 import { Container } from '../../../components/Container'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { SectionTitle } from '../../../components/SectionTitle'
 import { Contact } from '../../../components/contact/Contact'
 import { OperatingMode } from '../../../components/operatingMode/OperatingMode'
+import { S } from './Contacts_styles'
 
-export function Contacts() {
+export const Contacts: React.FC = () => {
 	return (
-		<StyledContacts>
+		<S.Contacts>
 			<Container>
 				<SectionTitle>Контакты</SectionTitle>
-				<Image src={map} alt='map' />
-				<FlexWrapper align='flex-start' justify='space-between'>
+				<S.Image src={map} alt='map' />
+				<FlexWrapper
+					align='flex-start'
+					justify='space-around'
+					wrap='wrap'
+					gap='20'
+				>
 					<Contact />
 					<OperatingMode />
 					<Contact />
 					<OperatingMode />
 				</FlexWrapper>
 			</Container>
-		</StyledContacts>
+		</S.Contacts>
 	)
 }
-
-const StyledContacts = styled.section`
-	padding: 180px 0 100px;
-`
-
-const Image = styled.img`
-	width: 100%;
-	margin-bottom: 80px;
-`

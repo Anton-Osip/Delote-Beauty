@@ -1,6 +1,5 @@
 import { Error } from '../../layout/sections/error/Error'
-
-export function ErrorPage() {
+export const ErrorPage: React.FC = () => {
 	return (
 		<>
 			<Error />

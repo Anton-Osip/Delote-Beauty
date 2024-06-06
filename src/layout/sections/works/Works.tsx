@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import work1 from '../../../assets/images/works/work-1.jpg'
 import work2 from '../../../assets/images/works/work-2.jpg'
 import work3 from '../../../assets/images/works/work-3.jpg'
@@ -11,6 +10,7 @@ import work9 from '../../../assets/images/works/work-9.jpg'
 import { Container } from '../../../components/Container'
 import { SectionTitle } from '../../../components/SectionTitle'
 import { Tabs } from '../../../components/tabs/Tabs'
+import { S } from './Works_Styles'
 
 const DataTabs = [
 	{ id: 'tab1', text: 'Показать все', active: true },
@@ -21,34 +21,18 @@ const DataTabs = [
 
 const worksImg = [work1, work2, work3, work4, work5, work6, work7, work8, work9]
 
-export function Works() {
+export const Works: React.FC = () => {
 	return (
-		<StyledWorks>
+		<S.Works>
 			<Container>
 				<SectionTitle>Наши работы</SectionTitle>
 				<Tabs tabs={DataTabs} />
-				<WorksWrapper>
+				<S.WorksWrapper>
 					{worksImg.map((item, index) => (
-						<Image src={item} key={`works${index}`} />
+						<S.Image src={item} key={`works${index}`} />
 					))}
-				</WorksWrapper>
+				</S.WorksWrapper>
 			</Container>
-		</StyledWorks>
+		</S.Works>
 	)
 }
-
-const StyledWorks = styled.section`
-	padding-bottom: 100px;
-`
-
-const WorksWrapper = styled.section`
-	margin-top: 55px;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-auto-rows: 1fr;
-	gap: 24px;
-`
-const Image = styled.img`
-	width: 100%;
-	aspect-ratio: 1/1;
-`

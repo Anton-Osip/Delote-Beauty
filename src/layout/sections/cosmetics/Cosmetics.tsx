@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Container } from '../../../components/Container'
 import { FlexWrapper } from '../../../components/FlexWrapper'
+import { theme } from '../../../styles/Theme'
 import { CosmeticsItem } from './cosmeticsItem/CosmeticsItem'
 const data = [
 	{
@@ -32,11 +33,11 @@ const data = [
 		viewBox: '0 0 110 108',
 	},
 ]
-export function Cosmetics() {
+export const Cosmetics: React.FC = () => {
 	return (
 		<StyledCosmetics>
 			<Container>
-				<FlexWrapper wrap='wrap' justify='space-between'>
+				<FlexWrapper wrap='wrap' justify='space-around'>
 					{data.map(item => (
 						<CosmeticsItem item={item} key={item.id} />
 					))}
@@ -47,4 +48,10 @@ export function Cosmetics() {
 }
 const StyledCosmetics = styled.section`
 	padding: 150px 0 168px;
+	@media ${theme.media.tablet} {
+		padding: 80px 0 65px;
+	}
+	@media ${theme.media.mobile} {
+		padding: 50px 0 30px;
+	}
 `

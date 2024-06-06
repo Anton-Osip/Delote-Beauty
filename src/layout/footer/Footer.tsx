@@ -1,17 +1,16 @@
 import { NavLink } from 'react-router-dom'
-import styled from 'styled-components'
 import { Container } from '../../components/Container'
 import { FlexWrapper } from '../../components/FlexWrapper'
 import { Contact } from '../../components/contact/Contact'
 import { Icon } from '../../components/icon/Icon'
 import { OperatingMode } from '../../components/operatingMode/OperatingMode'
-import { theme } from '../../styles/Theme'
+import { S } from './Footer_Styles'
 
 export function Footer() {
 	return (
-		<StyledFooter>
+		<S.Footer>
 			<Container>
-				<FlexWrapper justify='space-between' align='flex-start'>
+				<FlexWrapper justify='space-between' align='flex-start' wrap='wrap'>
 					<NavLink to={'/home'}>
 						<Icon
 							idIcon='logoIcon'
@@ -22,44 +21,18 @@ export function Footer() {
 					</NavLink>
 					<Contact />
 					<OperatingMode />
-					<Section>
-						<Title>Мы в Instagram</Title>
+					<S.Section>
+						<S.Title>Мы в Instagram</S.Title>
 						<Icon
 							idIcon='instagramIcon'
 							width='36'
 							height='36'
 							viewBox='0 0 36 36'
 						/>
-					</Section>
+					</S.Section>
 				</FlexWrapper>
-				<Copyright>Copyright © 2017 - 2022</Copyright>
+				<S.Copyright>Copyright © 2017 - 2022</S.Copyright>
 			</Container>
-		</StyledFooter>
+		</S.Footer>
 	)
 }
-
-const StyledFooter = styled.footer`
-	${FlexWrapper} {
-		padding: 80px 0;
-		border-top: 1px solid ${theme.colors.font};
-		border-bottom: 1px solid ${theme.colors.font};
-	}
-`
-
-const Section = styled.div``
-const Title = styled.h5`
-	font-family: 'Cormorant Garamond';
-	font-size: 24px;
-	font-weight: 700;
-	line-height: 120%;
-	margin-bottom: 25px;
-`
-
-const Copyright = styled.p`
-	text-align: center;
-	padding: 30px 0;
-	font-family: 'Cormorant Garamond';
-	font-size: 18px;
-	font-weight: 700;
-	line-height: 140%;
-`

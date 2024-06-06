@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import img1 from '../../../assets/images/teams/team-1.jpg'
 import img2 from '../../../assets/images/teams/team-2.jpg'
 import img3 from '../../../assets/images/teams/team-3.jpg'
@@ -6,6 +5,7 @@ import img4 from '../../../assets/images/teams/team-4.jpg'
 import img5 from '../../../assets/images/teams/team-5.jpg'
 import { Container } from '../../../components/Container'
 import { SectionTitle } from '../../../components/SectionTitle'
+import { S } from './Team_Styles'
 import { TeamItem } from './teamItem/TeamItem'
 
 const teamItem = [
@@ -17,27 +17,17 @@ const teamItem = [
 	{ id: 'team6', src: img2, name: 'Елена Васильевна', text: 'Визажист' },
 ]
 
-export function Team() {
+export const Team: React.FC = () => {
 	return (
-		<StyledTeam>
+		<S.Team>
 			<Container>
 				<SectionTitle>Наши мастера</SectionTitle>
-				<TeamWrapper>
+				<S.TeamWrapper>
 					{teamItem.map(item => (
 						<TeamItem item={item} key={item.id} />
 					))}
-				</TeamWrapper>
+				</S.TeamWrapper>
 			</Container>
-		</StyledTeam>
+		</S.Team>
 	)
 }
-
-const StyledTeam = styled.section`
-	padding: 180px 0 100px;
-`
-const TeamWrapper = styled.div`
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	row-gap: 60px;
-	column-gap: 24px;
-`
