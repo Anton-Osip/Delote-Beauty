@@ -14,12 +14,12 @@ export interface INavItem {
 }
 
 const NavDate: INavItem[] = [
-	{ id: 'LeftNav1', link: 'home', text: 'Главная' },
-	{ id: 'LeftNav2', link: 'team', text: 'Мастера' },
-	{ id: 'LeftNav3', link: 'error', text: 'Косметика' },
-	{ id: 'RightNav1', link: 'price', text: 'Акции' },
-	{ id: 'RightNav2', link: 'error', text: 'Отзывы' },
-	{ id: 'RightNav3', link: 'contacts', text: 'Контакты' },
+	{ id: 'LeftNav1', link: '/Delote-Beauty/home', text: 'Главная' },
+	{ id: 'LeftNav2', link: '/Delote-Beauty/team', text: 'Мастера' },
+	{ id: 'LeftNav3', link: '/Delote-Beauty/error', text: 'Косметика' },
+	{ id: 'RightNav1', link: '/Delote-Beauty/price', text: 'Акции' },
+	{ id: 'RightNav2', link: '/Delote-Beauty/error', text: 'Отзывы' },
+	{ id: 'RightNav3', link: '/Delote-Beauty/contacts', text: 'Контакты' },
 ]
 
 export const MobileHeader: React.FC = () => {
