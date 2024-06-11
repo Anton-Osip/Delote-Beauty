@@ -1,17 +1,27 @@
 import { S } from './Tabs_Styles'
+export type TabsStatus = 'all' | 'hairdressing' | 'manicure' | 'pedicure'
 
-type TabsPropsType = { id: string; text: string; active: boolean }
+export type TabsType = {
+	id: string
+	text: string
+	status: TabsStatus
+}
+type TabsPropsType = {
+	currentFilterStatus: string
+	changeFilterStatus: (value: TabsStatus) => void
+	tabs: TabsType[]
+}
 
-export const Tabs: React.FC<{
-	tabs: TabsPropsType[]
-}> = (props: { tabs: TabsPropsType[] }) => {
+export const Tabs: React.FC<TabsPropsType> = (props: TabsPropsType) => {
 	return (
 		<S.Tabs>
 			{props.tabs.map(item => (
 				<S.Link
-					href='#tabs'
+					active={props.currentFilterStatus === item.status}
 					key={item.id}
-					className={item.active ? 'active' : ''}
+					onClick={() => {
+						props.changeFilterStatus(item.status)
+					}}
 				>
 					{item.text}
 				</S.Link>
