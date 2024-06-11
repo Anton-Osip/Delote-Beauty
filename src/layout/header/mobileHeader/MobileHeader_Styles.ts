@@ -14,4 +14,14 @@ const MobileHeader = styled.header`
 	}
 `
 
-export const S = { MobileHeader }
+const Link = styled.a`
+	& svg {
+		stroke: ${theme.colors.font};
+		transition: ${theme.animations.transition};
+	}
+	& svg:hover {
+		stroke: ${theme.colors.borderColor};
+	}
+`
+
+export const S = { MobileHeader, Link }

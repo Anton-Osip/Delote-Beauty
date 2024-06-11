@@ -30,6 +30,7 @@ const ScrollDown = styled.a`
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 140%;
+	transition: ${theme.animations.transition};
 
 	&:after {
 		content: '';
@@ -41,6 +42,7 @@ const ScrollDown = styled.a`
 		height: 30px;
 		border: 1px solid ${theme.colors.font};
 		border-radius: 8px;
+		transition: ${theme.animations.transition};
 	}
 	&::before {
 		content: '';
@@ -52,6 +54,16 @@ const ScrollDown = styled.a`
 		height: 4px;
 		border-radius: 50%;
 		background-color: ${theme.colors.font};
+		transition: ${theme.animations.transition};
+	}
+	&:hover {
+		color: ${theme.colors.borderColor};
+	}
+	&:hover::before {
+		background-color: ${theme.colors.borderColor};
+	}
+	&:hover::after {
+		border-color: ${theme.colors.borderColor};
 	}
 `
 const TitleWrapper = styled.div`

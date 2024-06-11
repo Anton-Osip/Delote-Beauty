@@ -26,6 +26,7 @@ const Slider = styled.div`
 		width: 8px;
 		height: 8px;
 		border-radius: 20px;
+		transition: ${theme.animations.transition};
 		background-color: ${theme.colors.font};
 	}
 	& .alice-carousel__dots-item:not(.__custom):hover {

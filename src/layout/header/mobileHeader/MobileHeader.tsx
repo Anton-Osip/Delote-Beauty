@@ -29,12 +29,14 @@ export const MobileHeader: React.FC = () => {
 		<S.MobileHeader>
 			<Container>
 				<FlexWrapper justify='space-between' align='center'>
-					<Icon
-						idIcon='instagramIcon'
-						width='26'
-						height='26'
-						viewBox='0 0 26 26'
-					/>
+					<S.Link>
+						<Icon
+							idIcon='instagramIcon'
+							width='26'
+							height='26'
+							viewBox='0 0 26 26'
+						/>
+					</S.Link>
 					<Menu
 						navItems={NavDate}
 						modalIsOpen={modalIsOpen}

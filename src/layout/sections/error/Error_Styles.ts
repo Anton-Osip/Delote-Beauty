@@ -29,6 +29,7 @@ const Link = styled.a`
 	position: relative;
 	font-size: 26px;
 	font-weight: 700;
+	transition: ${theme.animations.transition};
 	line-height: 140%;
 	&:after {
 		content: '';
@@ -38,7 +39,15 @@ const Link = styled.a`
 		right: 0;
 		display: inline-block;
 		height: 2px;
+		transition: ${theme.animations.transition};
 		background-color: ${theme.colors.font};
+	}
+
+	&:hover {
+		color: ${theme.colors.borderColor};
+	}
+	&:hover:after {
+		background-color: ${theme.colors.borderColor};
 	}
 `
 

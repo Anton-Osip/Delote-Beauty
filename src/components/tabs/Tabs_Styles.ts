@@ -19,6 +19,7 @@ const Link = styled.a<{ active?: boolean }>`
 		Fmax: 24,
 		Fmin: 14,
 	})}
+	transition: ${theme.animations.transition};
 	letter-spacing: 0%;
 	${props =>
 		props.active &&
@@ -27,6 +28,9 @@ const Link = styled.a<{ active?: boolean }>`
 		`}
 
 	position: relative;
+	&:hover {
+		color: ${theme.colors.borderColor};
+	}
 	&:after {
 		content: '';
 		display: inline-block;
@@ -35,7 +39,9 @@ const Link = styled.a<{ active?: boolean }>`
 		left: 0;
 		right: 0;
 		height: 0px;
+		transition: ${theme.animations.transition};
 		background-color: ${theme.colors.borderColor};
+
 		${props =>
 			props.active &&
 			css<{ active?: boolean }>`
