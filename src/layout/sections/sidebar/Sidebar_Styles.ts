@@ -11,6 +11,7 @@ const Sidebar = styled.div<{ isOpen: boolean }>`
 	background: ${theme.colors.font};
 	background-color: ${theme.colors.backgroundColor};
 	padding: 0 80px;
+	transition: 1s ease-in-out;
 
 	${FlexWrapper} {
 		height: 100%;

@@ -6,6 +6,7 @@ import { ErrorPage } from './Pages/errorPage/ErrorPage'
 import { HomePage } from './Pages/homePage/HomePage'
 import { PricePage } from './Pages/pricePage/PricePage'
 import { TeamPage } from './Pages/teamPage/TeamPage'
+import { GoTop } from './components/goTop/GoTop'
 import { Footer } from './layout/footer/Footer'
 import { DesktopHeader } from './layout/header/desktopHeader/DesktopHeader'
 import { MobileHeader } from './layout/header/mobileHeader/MobileHeader'
@@ -32,6 +33,7 @@ export const App: React.FC = () => {
 				<Route path='/error' element={<ErrorPage />} />
 			</Routes>
 			<Footer />
+			<GoTop />
 		</div>
 	)
 }

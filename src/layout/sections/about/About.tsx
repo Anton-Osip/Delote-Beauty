@@ -5,7 +5,7 @@ import { Slider } from './slider/Slider'
 
 export const About: React.FC = () => {
 	return (
-		<S.About>
+		<S.About id='about'>
 			<FlexWrapper direction='column' align='center'>
 				<Icon idIcon='quoteIcon' width='80' height='64' viewBox='0 0 80 64' />
 				<Slider />

@@ -16,13 +16,13 @@ const Main = styled.div`
 `
 const MainTitle = styled.h1`
 	text-align: center;
-	flex-grow: 2;
-	display: flex;
-	align-items: center;
-	${font({ weight: 700, lineHeight: 1.2, Fmax: 72, Fmin: 40 })}
+	${font({ weight: 700, lineHeight: 1.2, Fmax: 72, Fmin: 36 })}
 `
-
-const ScrollDown = styled.button`
+const Text = styled.p`
+	text-align: center;
+	${font({ weight: 700, lineHeight: 1.2, Fmax: 72, Fmin: 36 })}
+`
+const ScrollDown = styled.a`
 	font-family: 'Cormorant Garamond';
 	display: inline-block;
 	padding-left: 40px;
@@ -30,6 +30,8 @@ const ScrollDown = styled.button`
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 140%;
+	transition: ${theme.animations.transition};
+
 	&:after {
 		content: '';
 		position: absolute;
@@ -40,6 +42,7 @@ const ScrollDown = styled.button`
 		height: 30px;
 		border: 1px solid ${theme.colors.font};
 		border-radius: 8px;
+		transition: ${theme.animations.transition};
 	}
 	&::before {
 		content: '';
@@ -51,7 +54,24 @@ const ScrollDown = styled.button`
 		height: 4px;
 		border-radius: 50%;
 		background-color: ${theme.colors.font};
+		transition: ${theme.animations.transition};
+	}
+	&:hover {
+		color: ${theme.colors.borderColor};
+	}
+	&:hover::before {
+		background-color: ${theme.colors.borderColor};
+	}
+	&:hover::after {
+		border-color: ${theme.colors.borderColor};
 	}
 `
+const TitleWrapper = styled.div`
+	flex-grow: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+`
 
-export const S = { Main, MainTitle, ScrollDown }
+export const S = { Main, MainTitle, ScrollDown, Text, TitleWrapper }

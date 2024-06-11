@@ -6,13 +6,14 @@ const Burger = styled.button<{ isOpen: boolean }>`
 	height: 50px;
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
+	justify-content: center;
 
 	span {
 		display: inline-block;
 		width: 40px;
 		height: 2px;
 		background-color: ${theme.colors.font};
+		transition: ${theme.animations.transition};
 		position: relative;
 		${props =>
 			props.isOpen &&
@@ -33,6 +34,7 @@ const Burger = styled.button<{ isOpen: boolean }>`
 
 	span::before {
 		top: 10px;
+		transition: ${theme.animations.transition};
 
 		${props =>
 			props.isOpen &&
@@ -42,6 +44,7 @@ const Burger = styled.button<{ isOpen: boolean }>`
 			`}
 	}
 	span::after {
+		transition: ${theme.animations.transition};
 		bottom: 10px;
 		${props =>
 			props.isOpen &&

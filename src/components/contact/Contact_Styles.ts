@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { theme } from '../../styles/Theme'
 
 const Contacts = styled.div``
 const Title = styled.h5`
@@ -14,6 +15,11 @@ const Link = styled.a`
 	font-weight: 400;
 	line-height: 130%;
 	margin-bottom: 15px;
+	transition: ${theme.animations.transition};
+
+	&:hover {
+		color: ${theme.colors.borderColor};
+	}
 `
 
 const Text = styled.span`

@@ -1,14 +1,23 @@
+import Typewriter from 'typewriter-effect'
 import { S } from './Main_styles'
 
 export const Main: React.FC = () => {
 	return (
 		<S.Main>
-			<S.MainTitle>
-				Салон красоты <br />
-				«DELOTE BEAUTY»
-				<br /> на Крестовском
-			</S.MainTitle>
-			<S.ScrollDown>Прокрутите вниз</S.ScrollDown>
+			<S.TitleWrapper>
+				<S.Text>Салон красоты </S.Text>
+				<S.MainTitle>
+					<Typewriter
+						options={{
+							strings: ['«DELOTE BEAUTY»'],
+							autoStart: true,
+							loop: true,
+						}}
+					/>
+				</S.MainTitle>
+				<S.Text>на Крестовском</S.Text>
+			</S.TitleWrapper>
+			<S.ScrollDown href='#about'>Прокрутите вниз</S.ScrollDown>
 		</S.Main>
 	)
 }

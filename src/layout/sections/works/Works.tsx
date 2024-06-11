@@ -1,3 +1,5 @@
+import { AnimatePresence, motion } from 'framer-motion'
+import { useState } from 'react'
 import work1 from '../../../assets/images/works/work-1.jpg'
 import work2 from '../../../assets/images/works/work-2.jpg'
 import work3 from '../../../assets/images/works/work-3.jpg'
@@ -9,28 +11,71 @@ import work8 from '../../../assets/images/works/work-8.jpg'
 import work9 from '../../../assets/images/works/work-9.jpg'
 import { Container } from '../../../components/Container'
 import { SectionTitle } from '../../../components/SectionTitle'
-import { Tabs } from '../../../components/tabs/Tabs'
+import { Tabs, TabsStatus, TabsType } from '../../../components/tabs/Tabs'
 import { S } from './Works_Styles'
 
-const DataTabs = [
-	{ id: 'tab1', text: 'Показать все', active: true },
-	{ id: 'tab2', text: 'Парикмахерские услуги', active: false },
-	{ id: 'tab3', text: 'Маникюр', active: false },
-	{ id: 'tab4', text: 'Педикюр', active: false },
+type WorksDataType = { id: string; src: string; type: TabsStatus }
+
+const DataTabs: TabsType[] = [
+	{ id: 'tab1', text: 'Показать все', status: 'all' },
+	{ id: 'tab2', text: 'Парикмахерские услуги', status: 'hairdressing' },
+	{ id: 'tab3', text: 'Маникюр', status: 'manicure' },
+	{ id: 'tab4', text: 'Педикюр', status: 'pedicure' },
 ]
 
-const worksImg = [work1, work2, work3, work4, work5, work6, work7, work8, work9]
+const worksData: WorksDataType[] = [
+	{ id: 'works1', src: work1, type: 'hairdressing' },
+	{ id: 'works2', src: work2, type: 'pedicure' },
+	{ id: 'works3', src: work3, type: 'manicure' },
+	{ id: 'works4', src: work4, type: 'hairdressing' },
+	{ id: 'works5', src: work5, type: 'pedicure' },
+	{ id: 'works6', src: work6, type: 'hairdressing' },
+	{ id: 'works7', src: work7, type: 'manicure' },
+	{ id: 'works8', src: work8, type: 'manicure' },
+	{ id: 'works9', src: work9, type: 'pedicure' },
+]
 
 export const Works: React.FC = () => {
+	const [currentFilterStatus, setCurrentFilterStatus] = useState('all')
+	let filteredWorks = worksData
+
+	if (currentFilterStatus === 'hairdressing') {
+		filteredWorks = worksData.filter(work => work.type === 'hairdressing')
+	}
+	if (currentFilterStatus === 'manicure') {
+		filteredWorks = worksData.filter(work => work.type === 'manicure')
+	}
+	if (currentFilterStatus === 'pedicure') {
+		filteredWorks = worksData.filter(work => work.type === 'pedicure')
+	}
+
+	function changeFilterStatus(status: TabsStatus) {
+		setCurrentFilterStatus(status)
+	}
+
 	return (
 		<S.Works>
 			<Container>
 				<SectionTitle>Наши работы</SectionTitle>
-				<Tabs tabs={DataTabs} />
+				<Tabs
+					tabs={DataTabs}
+					changeFilterStatus={changeFilterStatus}
+					currentFilterStatus={currentFilterStatus}
+				/>
 				<S.WorksWrapper>
-					{worksImg.map((item, index) => (
-						<S.Image src={item} key={`works${index}`} />
-					))}
+					<AnimatePresence>
+						{filteredWorks.map(item => (
+							<motion.div
+								layout
+								key={item.id}
+								initial={{ opacity: 0 }}
+								animate={{ opacity: 1 }}
+								exit={{ opacity: 0 }}
+							>
+								<S.Image src={item.src} key={item.id} />
+							</motion.div>
+						))}
+					</AnimatePresence>
 				</S.WorksWrapper>
 			</Container>
 		</S.Works>

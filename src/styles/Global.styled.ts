@@ -2,6 +2,10 @@ import { createGlobalStyle } from 'styled-components'
 import { theme } from './Theme'
 
 export const GlobalStyled = createGlobalStyle`
+	html {
+		scroll-behavior: smooth;
+	}
+	
 	*,
 	*::before,
 	*::after{
@@ -20,6 +24,7 @@ export const GlobalStyled = createGlobalStyle`
 		color:${theme.colors.font};
 		line-height: 1.2;
 		background-color:${theme.colors.backgroundColor};
+		
 	}
 
 	a{

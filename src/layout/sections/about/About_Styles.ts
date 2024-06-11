@@ -22,6 +22,20 @@ const Slider = styled.div`
 	flex-direction: column;
 	align-items: center;
 
+	& .alice-carousel__dots-item:not(.__custom) {
+		width: 8px;
+		height: 8px;
+		border-radius: 20px;
+		transition: ${theme.animations.transition};
+		background-color: ${theme.colors.font};
+	}
+	& .alice-carousel__dots-item:not(.__custom):hover {
+		background-color: ${theme.colors.borderColor};
+	}
+	& .alice-carousel__dots-item:not(.__custom).__active {
+		width: 24px;
+		background-color: ${theme.colors.borderColor};
+	}
 	@media ${theme.media.tablet} {
 		margin-top: 20px;
 	}
@@ -39,7 +53,7 @@ const Text = styled.p`
 	})}
 	letter-spacing: 0%;
 	text-align: center;
-
+	user-select: none;
 	& + p {
 		margin-top: 30px;
 		@media ${theme.media.tablet} {

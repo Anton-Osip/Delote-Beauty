@@ -8,14 +8,12 @@ const Menu = styled.nav<{ modalIsOpen?: boolean }>`
 	}
 
 	a {
+		position: relative;
 		font-family: 'Cormorant Garamond';
 		font-size: 18px;
 		font-weight: 600;
 		line-height: 130%;
-	}
-	a.active {
-		color: ${theme.colors.borderColor};
-		position: relative;
+		transition: ${theme.animations.transition};
 		&:after {
 			content: '';
 			display: inline-block;
@@ -23,8 +21,19 @@ const Menu = styled.nav<{ modalIsOpen?: boolean }>`
 			bottom: -4px;
 			left: 0;
 			right: 0;
-			height: 2px;
+			height: 0px;
 			background-color: ${theme.colors.borderColor};
+			transition: ${theme.animations.transition};
+		}
+	}
+	a:hover {
+		color: ${theme.colors.borderColor};
+	}
+	a.active {
+		color: ${theme.colors.borderColor};
+
+		&:after {
+			height: 2px;
 		}
 	}
 
@@ -34,6 +43,7 @@ const Menu = styled.nav<{ modalIsOpen?: boolean }>`
 		left: 0;
 		width: 100%;
 		height: 100%;
+		transition: 1s ease-in-out;
 		background-color: ${theme.colors.backgroundColor};
 
 		ul {

@@ -13,5 +13,14 @@ const DesktopHeader = styled.header`
 		padding: 40px 15px 30px 15px;
 	}
 `
+const Link = styled.a`
+	& svg {
+		stroke: ${theme.colors.font};
+		transition: ${theme.animations.transition};
+	}
+	& svg:hover {
+		stroke: ${theme.colors.borderColor};
+	}
+`
 
-export const S = { DesktopHeader }
+export const S = { DesktopHeader, Link }

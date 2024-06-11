@@ -24,6 +24,8 @@ const Contacts = styled.section`
 `
 
 const Image = styled.img`
+	position: relative;
+	z-index: 1;
 	width: 100%;
 	margin-bottom: 80px;
 	@media ${theme.media.tablet} {

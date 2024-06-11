@@ -28,6 +28,7 @@ const ImageWrapper = styled.div`
 		left: 0;
 		right: 0;
 		bottom: 0;
+		transition: ${theme.animations.transition};
 		background: rgba(0, 0, 0, 0.2);
 	}
 	&::before {
