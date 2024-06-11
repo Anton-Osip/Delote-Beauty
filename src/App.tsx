@@ -26,7 +26,7 @@ export const App: React.FC = () => {
 			{width < breakpoint ? <MobileHeader /> : <DesktopHeader />}
 			<Routes>
 				<Route
-					path='/Delote-Beauty'
+					path='/Delote-Beauty/'
 					element={<Navigate to={'/Delote-Beauty/home'} />}
 				/>
 				<Route path='/Delote-Beauty/home' element={<HomePage />} />
