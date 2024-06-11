@@ -1,3 +1,4 @@
+import { Fade } from 'react-awesome-reveal'
 import img from '../../../assets/images/prices/price.jpg'
 import { Container } from '../../../components/Container'
 import { SectionTitle } from '../../../components/SectionTitle'
@@ -10,14 +11,24 @@ export const Price: React.FC = () => {
 			<Container>
 				<SectionTitle>Цены на услуги</SectionTitle>
 				<S.PriceWrapper>
-					<S.Image src={img} alt='price' />
-					<PriceList mode='auto' />
-
-					<PriceList />
-					<S.Image src={img} alt='price' />
-
-					<S.Image src={img} alt='price' />
-					<PriceList mode='auto' />
+					<Fade>
+						<S.Image src={img} alt='price' />
+					</Fade>
+					<Fade>
+						<PriceList mode='auto' />
+					</Fade>
+					<Fade>
+						<PriceList />
+					</Fade>
+					<Fade>
+						<S.Image src={img} alt='price' />
+					</Fade>
+					<Fade>
+						<S.Image src={img} alt='price' />
+					</Fade>
+					<Fade>
+						<PriceList mode='auto' />
+					</Fade>
 				</S.PriceWrapper>
 			</Container>
 		</S.Price>

@@ -1,3 +1,4 @@
+import { Slide } from 'react-awesome-reveal'
 import services1 from '../../../assets/images/services/services-1.jpg'
 import services2 from '../../../assets/images/services/services-2.jpg'
 import services3 from '../../../assets/images/services/services-3.jpg'
@@ -21,7 +22,9 @@ export const Services: React.FC = () => {
 			<Container>
 				<S.ServicesContainer>
 					{data.map(item => (
-						<ServicesItem item={item} key={item.id} />
+						<Slide key={item.id}>
+							<ServicesItem item={item} />
+						</Slide>
 					))}
 				</S.ServicesContainer>
 			</Container>

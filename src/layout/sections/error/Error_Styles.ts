@@ -21,7 +21,7 @@ const Image = styled.img`
 	z-index: 1;
 
 	margin-bottom: 24px;
-	width: 100%;
+	width: 40%;
 `
 const Link = styled.a`
 	font-family: 'Cormorant Garamond';

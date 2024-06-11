@@ -1,3 +1,4 @@
+import { Slide } from 'react-awesome-reveal'
 import styled from 'styled-components'
 import { Container } from '../../../components/Container'
 import { FlexWrapper } from '../../../components/FlexWrapper'
@@ -39,7 +40,9 @@ export const Cosmetics: React.FC = () => {
 			<Container>
 				<FlexWrapper wrap='wrap' justify='space-around'>
 					{data.map(item => (
-						<CosmeticsItem item={item} key={item.id} />
+						<Slide key={item.id}>
+							<CosmeticsItem item={item} />
+						</Slide>
 					))}
 				</FlexWrapper>
 			</Container>

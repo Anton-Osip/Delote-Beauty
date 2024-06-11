@@ -1,3 +1,4 @@
+import { Slide } from 'react-awesome-reveal'
 import img1 from '../../../assets/images/teams/team-1.jpg'
 import img2 from '../../../assets/images/teams/team-2.jpg'
 import img3 from '../../../assets/images/teams/team-3.jpg'
@@ -24,7 +25,9 @@ export const Team: React.FC = () => {
 				<SectionTitle>Наши мастера</SectionTitle>
 				<S.TeamWrapper>
 					{teamItem.map(item => (
-						<TeamItem item={item} key={item.id} />
+						<Slide key={item.id}>
+							<TeamItem item={item} />
+						</Slide>
 					))}
 				</S.TeamWrapper>
 			</Container>
