@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 import work1 from '../../../assets/images/works/work-1.jpg'
 import work2 from '../../../assets/images/works/work-2.jpg'
@@ -62,9 +63,19 @@ export const Works: React.FC = () => {
 					currentFilterStatus={currentFilterStatus}
 				/>
 				<S.WorksWrapper>
-					{filteredWorks.map(item => (
-						<S.Image src={item.src} key={item.id} />
-					))}
+					<AnimatePresence>
+						{filteredWorks.map(item => (
+							<motion.div
+								layout
+								key={item.id}
+								initial={{ opacity: 0 }}
+								animate={{ opacity: 1 }}
+								exit={{ opacity: 0 }}
+							>
+								<S.Image src={item.src} key={item.id} />
+							</motion.div>
+						))}
+					</AnimatePresence>
 				</S.WorksWrapper>
 			</Container>
 		</S.Works>
