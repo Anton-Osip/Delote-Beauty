@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Delote-Beauty/static/css/main.7bd1a540.css",
-    "main.js": "/Delote-Beauty/static/js/main.9a57edb0.js",
+    "main.js": "/Delote-Beauty/static/js/main.9194f9c3.js",
     "static/js/787.3e486ce2.chunk.js": "/Delote-Beauty/static/js/787.3e486ce2.chunk.js",
     "static/media/baner2x.jpg": "/Delote-Beauty/static/media/baner2x.511cf2a1edbc0bb2ad17.jpg",
     "static/media/work-7.jpg": "/Delote-Beauty/static/media/work-7.afa3efaf472afdcd99c0.jpg",
@@ -30,11 +30,11 @@
     "static/media/work-2.jpg": "/Delote-Beauty/static/media/work-2.e55025943a0518f9bdf6.jpg",
     "index.html": "/Delote-Beauty/index.html",
     "main.7bd1a540.css.map": "/Delote-Beauty/static/css/main.7bd1a540.css.map",
-    "main.9a57edb0.js.map": "/Delote-Beauty/static/js/main.9a57edb0.js.map",
+    "main.9194f9c3.js.map": "/Delote-Beauty/static/js/main.9194f9c3.js.map",
     "787.3e486ce2.chunk.js.map": "/Delote-Beauty/static/js/787.3e486ce2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7bd1a540.css",
-    "static/js/main.9a57edb0.js"
+    "static/js/main.9194f9c3.js"
   ]
 }
