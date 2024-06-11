@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/Delote-Beauty/static/css/main.7bd1a540.css",
+    "main.js": "/Delote-Beauty/static/js/main.9a57edb0.js",
+    "static/js/787.3e486ce2.chunk.js": "/Delote-Beauty/static/js/787.3e486ce2.chunk.js",
+    "static/media/baner2x.jpg": "/Delote-Beauty/static/media/baner2x.511cf2a1edbc0bb2ad17.jpg",
+    "static/media/work-7.jpg": "/Delote-Beauty/static/media/work-7.afa3efaf472afdcd99c0.jpg",
+    "static/media/icons-sprite.svg": "/Delote-Beauty/static/media/icons-sprite.be6a51443304ffd24c9597a3c5139697.svg",
+    "static/media/services-1.jpg": "/Delote-Beauty/static/media/services-1.df2a0410ed88e5778447.jpg",
+    "static/media/map.jpg": "/Delote-Beauty/static/media/map.d2ae2ccaddfbf74c91e5.jpg",
+    "static/media/price.jpg": "/Delote-Beauty/static/media/price.3d7b475b133ecfc29e70.jpg",
+    "static/media/services-2.jpg": "/Delote-Beauty/static/media/services-2.44733e67781ba67bdd7e.jpg",
+    "static/media/Error.png": "/Delote-Beauty/static/media/Error.9c06a0b859a0adeae709.png",
+    "static/media/services-5.jpg": "/Delote-Beauty/static/media/services-5.a1bb8c50ca236eb0ff67.jpg",
+    "static/media/team-5.jpg": "/Delote-Beauty/static/media/team-5.8c4c2d29c2487f868350.jpg",
+    "static/media/services-6.jpg": "/Delote-Beauty/static/media/services-6.e97ca6b2eff551451ce0.jpg",
+    "static/media/services-3.jpg": "/Delote-Beauty/static/media/services-3.c34ae488b4ceb4ad48a5.jpg",
+    "static/media/services-4.jpg": "/Delote-Beauty/static/media/services-4.2cb6db1bdf9b0ad409ad.jpg",
+    "static/media/team-1.jpg": "/Delote-Beauty/static/media/team-1.44f7be961e70a5f50049.jpg",
+    "static/media/work-1.jpg": "/Delote-Beauty/static/media/work-1.1c2d95d23e6fff7f00e2.jpg",
+    "static/media/work-6.jpg": "/Delote-Beauty/static/media/work-6.f089b21e93db425a52b9.jpg",
+    "static/media/team-4.jpg": "/Delote-Beauty/static/media/team-4.2a5f8ece16f069a617a7.jpg",
+    "static/media/team-2.jpg": "/Delote-Beauty/static/media/team-2.9a5a9754138de682513d.jpg",
+    "static/media/team-3.jpg": "/Delote-Beauty/static/media/team-3.420773e3eec16e06121d.jpg",
+    "static/media/work-8.jpg": "/Delote-Beauty/static/media/work-8.3f3c1eeb2540050017ca.jpg",
+    "static/media/work-5.jpg": "/Delote-Beauty/static/media/work-5.e78e9ec240ed6214bf1a.jpg",
+    "static/media/work-4.jpg": "/Delote-Beauty/static/media/work-4.8b7a94c3e19d5bc409af.jpg",
+    "static/media/work-9.jpg": "/Delote-Beauty/static/media/work-9.11c37d4d204ee6a1d77c.jpg",
+    "static/media/work-3.jpg": "/Delote-Beauty/static/media/work-3.9a3042825f309a71bf7d.jpg",
+    "static/media/work-2.jpg": "/Delote-Beauty/static/media/work-2.e55025943a0518f9bdf6.jpg",
+    "index.html": "/Delote-Beauty/index.html",
+    "main.7bd1a540.css.map": "/Delote-Beauty/static/css/main.7bd1a540.css.map",
+    "main.9a57edb0.js.map": "/Delote-Beauty/static/js/main.9a57edb0.js.map",
+    "787.3e486ce2.chunk.js.map": "/Delote-Beauty/static/js/787.3e486ce2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7bd1a540.css",
+    "static/js/main.9a57edb0.js"
+  ]
+}
