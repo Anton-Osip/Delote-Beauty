@@ -5,7 +5,7 @@ import { theme } from '../../../styles/Theme'
 
 const Main = styled.div`
 	background: rgba(0, 0, 0, 0.5) url(${image}) no-repeat center / cover;
-	padding: 100px 0 5%;
+	padding: 100px 0 2%;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -16,12 +16,12 @@ const Main = styled.div`
 `
 const MainTitle = styled.h1`
 	text-align: center;
-	flex-grow: 2;
-	display: flex;
-	align-items: center;
 	${font({ weight: 700, lineHeight: 1.2, Fmax: 72, Fmin: 40 })}
 `
-
+const Text = styled.p`
+	text-align: center;
+	${font({ weight: 700, lineHeight: 1.2, Fmax: 72, Fmin: 40 })}
+`
 const ScrollDown = styled.button`
 	font-family: 'Cormorant Garamond';
 	display: inline-block;
@@ -53,5 +53,12 @@ const ScrollDown = styled.button`
 		background-color: ${theme.colors.font};
 	}
 `
+const TitleWrapper = styled.div`
+	flex-grow: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+`
 
-export const S = { Main, MainTitle, ScrollDown }
+export const S = { Main, MainTitle, ScrollDown, Text, TitleWrapper }
