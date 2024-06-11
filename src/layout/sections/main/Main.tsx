@@ -17,7 +17,7 @@ export const Main: React.FC = () => {
 				</S.MainTitle>
 				<S.Text>на Крестовском</S.Text>
 			</S.TitleWrapper>
-			<S.ScrollDown>Прокрутите вниз</S.ScrollDown>
+			<S.ScrollDown href='#about'>Прокрутите вниз</S.ScrollDown>
 		</S.Main>
 	)
 }

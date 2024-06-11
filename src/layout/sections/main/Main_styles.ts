@@ -22,7 +22,7 @@ const Text = styled.p`
 	text-align: center;
 	${font({ weight: 700, lineHeight: 1.2, Fmax: 72, Fmin: 36 })}
 `
-const ScrollDown = styled.button`
+const ScrollDown = styled.a`
 	font-family: 'Cormorant Garamond';
 	display: inline-block;
 	padding-left: 40px;
@@ -30,6 +30,7 @@ const ScrollDown = styled.button`
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 140%;
+
 	&:after {
 		content: '';
 		position: absolute;
