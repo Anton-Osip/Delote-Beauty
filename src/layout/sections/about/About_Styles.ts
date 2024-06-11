@@ -52,7 +52,7 @@ const Text = styled.p`
 	})}
 	letter-spacing: 0%;
 	text-align: center;
-
+	user-select: none;
 	& + p {
 		margin-top: 30px;
 		@media ${theme.media.tablet} {

@@ -17,6 +17,9 @@ const Error = styled.section`
 `
 
 const Image = styled.img`
+	position: relative;
+	z-index: 1;
+
 	margin-bottom: 24px;
 	width: 100%;
 `

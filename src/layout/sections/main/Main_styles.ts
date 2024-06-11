@@ -5,7 +5,7 @@ import { theme } from '../../../styles/Theme'
 
 const Main = styled.div`
 	background: rgba(0, 0, 0, 0.5) url(${image}) no-repeat center / cover;
-	padding: 100px 0 2%;
+	padding: 100px 0 5%;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -16,11 +16,11 @@ const Main = styled.div`
 `
 const MainTitle = styled.h1`
 	text-align: center;
-	${font({ weight: 700, lineHeight: 1.2, Fmax: 72, Fmin: 40 })}
+	${font({ weight: 700, lineHeight: 1.2, Fmax: 72, Fmin: 36 })}
 `
 const Text = styled.p`
 	text-align: center;
-	${font({ weight: 700, lineHeight: 1.2, Fmax: 72, Fmin: 40 })}
+	${font({ weight: 700, lineHeight: 1.2, Fmax: 72, Fmin: 36 })}
 `
 const ScrollDown = styled.button`
 	font-family: 'Cormorant Garamond';
